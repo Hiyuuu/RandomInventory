@@ -29,12 +29,16 @@ class RandomInventoryListener : Listener {
 
     var changeTime = config.getInt("ChangeTime", 60)
 
-    fun every() {
+    /**
+     * 定期的にアクションを起こすファンクション
+     */
+    private fun every() {
 
         var count = -1
         object:  BukkitRunnable() { override fun run() { count++
             if (count < changeTime) return
             count = 0
+        
 
             val players = Bukkit.getOnlinePlayers()
             val invData = players
