@@ -1,0 +1,6 @@
+name: RandomInventory
+version: 1.0
+main: RandomInventory
+authors:
+  - HIYU1576
+api-version: 1.19
