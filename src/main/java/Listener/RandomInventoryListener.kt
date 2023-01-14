@@ -53,7 +53,7 @@ class RandomInventoryListener : Listener {
             val diffTime = changeTime - count
 
             // 3秒前カウント
-            if (diffTime <= 3) {
+            if ((1..3).contains(diffTime)) {
                 val pitch = if (diffTime == 3) 2.0F else if (diffTime == 2) 1.0F else if (diffTime == 1) 0.0F else 0.0F
                 players.forEach {
                     it.sendTitle("", "§c§l§n ${diffTime} ", 0, 20, 20)
