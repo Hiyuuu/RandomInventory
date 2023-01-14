@@ -4,12 +4,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class RandomInventory extends JavaPlugin {
 
     private static JavaPlugin plugin;
+    public static RandomInventoryListener randomInventoryListener;
 
     @Override
     public void onEnable() {
         plugin = this;
 
-        new RandomInventoryListener();
+        new CommentCommand();
+        randomInventoryListener = new RandomInventoryListener();
         this.getLogger().info("[RandomInventory] プラグインが有効になった");
     }
 
